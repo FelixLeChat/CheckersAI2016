@@ -57,7 +57,7 @@ public class Game {
    
     private void Initialize(char human)
     {        
-        assert(human=='w' || human=='b' || human == 'a' || human == 'n' || human == 'm');
+        assert(human=='w' || human=='b' || human == 'a' || human == 'n' || human == 'm' || human == 'r');
         
         board  = new Board();
         switch(human)
@@ -81,6 +81,10 @@ public class Game {
             case 'm':            
                 White.owner = Owner.ROBOTALICE;
                 Black.owner = Owner.ROBOTSASHA;
+                break;
+            case 'r':
+                White.owner = Owner.RANDOM;
+                Black.owner = Owner.RANDOM;
                 break;
         }
     }

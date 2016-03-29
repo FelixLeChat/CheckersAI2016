@@ -26,6 +26,7 @@ public class UserInteractions {
         System.out.println("Enter 'b/B' if you want to play as black.");
         System.out.println("Enter 'a/A' for two player game.");
         System.out.println("Enter 'n/N' for auto play.");
+        System.out.println("Enter 'r/R' for random bots");
         PrintSeparator('#');
         
         String choice = new String();
@@ -33,10 +34,15 @@ public class UserInteractions {
         while (true)
         {
             try {
-                System.out.print("Enter your Choice (w/W/b/B/a/A/n/N/m): ");
+                System.out.print("Enter your Choice (w/W/b/B/a/A/n/N/m/r/R): ");
                 choice = br.readLine().toLowerCase();
                 
-                if (choice.equals("w")||choice.equals("b")||choice.equals("a")||choice.equals("n")||choice.equals("m")){
+                if (choice.equals("w")
+                        ||choice.equals("b")
+                        ||choice.equals("a")
+                        ||choice.equals("n")
+                        ||choice.equals("m")
+                        ||choice.equals("r")){
                     break;                
                 }
             } catch (Exception ex) {}
