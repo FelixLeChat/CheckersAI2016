@@ -36,6 +36,10 @@ public class White
         {
             RobotSasha.makeNextWhiteMoves();
         }
+        else if(owner.equals(Owner.RANDOM))
+        {
+            RandomRobot.makeNextWhiteMoves();
+        }
     }
     
 

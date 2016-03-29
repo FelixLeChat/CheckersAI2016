@@ -31,7 +31,8 @@ enum Owner{
     HUMAN,
     ROBOT,
     ROBOTALICE,
-    ROBOTSASHA
+    ROBOTSASHA,
+    RANDOM
 }
 
 enum MoveDir{

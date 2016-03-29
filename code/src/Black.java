@@ -36,6 +36,10 @@ public class Black {
         {
             RobotSasha.makeNextBlackMoves();
         }
+        else if(owner.equals(Owner.RANDOM))
+        {
+            RandomRobot.makeNextBlackMoves();
+        }
     }
     
     

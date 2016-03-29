@@ -40,8 +40,6 @@ public class Robot {
         System.out.print("Robot's Move was ");
         UserInteractions.DisplayMoveSeq(resultantMoveSeq);
         System.out.println();
-
-
     }
 
     /**
