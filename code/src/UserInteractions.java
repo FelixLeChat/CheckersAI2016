@@ -33,10 +33,10 @@ public class UserInteractions {
         while (true)
         {
             try {
-                System.out.print("Enter your Choice (w/W/b/B/a/A/n/N): ");
+                System.out.print("Enter your Choice (w/W/b/B/a/A/n/N/m): ");
                 choice = br.readLine().toLowerCase();
                 
-                if (choice.equals("w")||choice.equals("b")||choice.equals("a")||choice.equals("n")){
+                if (choice.equals("w")||choice.equals("b")||choice.equals("a")||choice.equals("n")||choice.equals("m")){
                     break;                
                 }
             } catch (Exception ex) {}
