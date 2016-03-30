@@ -241,7 +241,10 @@ public class Board {
     
     
     public boolean CheckGameComplete() {
-        return (this.blackPieces==0 || this.whitePieces == 0)?true:false;
+        if(this.blackPieces==0 || this.whitePieces == 0)
+            return true;
+
+        return false;
     }
     
     

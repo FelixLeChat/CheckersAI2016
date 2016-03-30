@@ -38,7 +38,9 @@ public class RandomRobot extends Robot{
 
 
         System.out.print("Robot's Move was ");
-        UserInteractions.DisplayMoveSeq(resultantMoveSeq);
+        Vector<Move> currentMove = new Vector<Move>();
+        currentMove.add(move);
+        UserInteractions.DisplayMoveSeq(currentMove);
         System.out.println();
     }
 

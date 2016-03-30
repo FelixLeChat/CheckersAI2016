@@ -83,7 +83,7 @@ public class Game {
                 Black.owner = Owner.ROBOTSASHA;
                 break;
             case 'r':
-                White.owner = Owner.RANDOM;
+                White.owner = Owner.ROBOT;
                 Black.owner = Owner.RANDOM;
                 break;
         }
