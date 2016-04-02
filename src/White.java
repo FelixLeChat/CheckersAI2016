@@ -15,9 +15,9 @@ public class White
     
     public static void Move()
     {   
-        UserInteractions.PrintSeparator('-');
-        System.out.println("\t\tWHITE's TURN");
-        UserInteractions.PrintSeparator('-');
+        //UserInteractions.PrintSeparator('-');
+        //System.out.println("\t\tWHITE's TURN");
+        //UserInteractions.PrintSeparator('-');
         
         if (owner.equals(Owner.HUMAN)){            
             

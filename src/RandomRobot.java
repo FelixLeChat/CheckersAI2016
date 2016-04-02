@@ -19,9 +19,6 @@ public class RandomRobot extends Robot{
     {
         Vector< Vector<Move>> resultantMoveSeq = expandMoves(Game.board, type);
 
-
-
-
         int rnd = new Random().nextInt(resultantMoveSeq.size());
         Vector<Move> moves = resultantMoveSeq.elementAt(rnd);
         for(Move m:moves){
@@ -32,9 +29,9 @@ public class RandomRobot extends Robot{
 
         }
 
-        System.out.print("Random Robot's Move was ");
-        UserInteractions.DisplayMoveSeq(moves);
-        System.out.println();
+        //System.out.print("Random Robot's Move was ");
+       // UserInteractions.DisplayMoveSeq(moves);
+        //System.out.println();
     }
 
 }

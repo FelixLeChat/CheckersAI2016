@@ -10,7 +10,9 @@ import java.util.Vector;
  *
  * @author ASHISH
  */
-public class UserInteractions {        
+public class UserInteractions {
+
+    public static boolean isDisplayOn = true;
     
     public static String GameChoice()
     {
@@ -117,38 +119,44 @@ public class UserInteractions {
     
     public static void PrintSeparator(char ch)
     {
-        switch(ch){
-            case '_':
-                System.out.println("___________________________________________________________________________");
-                break;
-            case '-':
-                System.out.println("---------------------------------------------------------------------------");
-                break;
-            case '#':
-                System.out.println("###########################################################################");
-                break;            
+        if(isDisplayOn) {
+            switch (ch) {
+                case '_':
+                    System.out.println("___________________________________________________________________________");
+                    break;
+                case '-':
+                    System.out.println("---------------------------------------------------------------------------");
+                    break;
+                case '#':
+                    System.out.println("###########################################################################");
+                    break;
+            }
         }
     }
     
     public static void DisplayGreetings(Player color) {
-        
-        Game.board.Display();
-        PrintSeparator('_');
-        
-        if (color.equals(Player.white)){
-            System.out.println("Congrats!!!!!!!!!! White has Won.");
-        }
-        else{
-            System.out.println("Congrats!!!!!!!!!! Black has Won.");
+
+        if(isDisplayOn) {
+            Game.board.Display();
+            PrintSeparator('_');
+
+            if (color.equals(Player.white)) {
+                System.out.println("Congrats!!!!!!!!!! White has Won.");
+            } else {
+                System.out.println("Congrats!!!!!!!!!! Black has Won.");
+            }
         }
     }
         
-    public static void DisplayMoveSeq(Vector<Move> moveSeq){
-        for(Move m:moveSeq){
-            m.display();
-            System.out.print(", ");
+    public static void DisplayMoveSeq(Vector<Move> moveSeq) {
+
+        if (isDisplayOn) {
+            for (Move m : moveSeq) {
+                m.display();
+                System.out.print(", ");
+            }
+
+            System.out.println();
         }
- 
-        System.out.println();
     }
 }

@@ -8,6 +8,11 @@ public class Robot {
     
     static Oracle oracle = new Oracle();
     static int MAX_DEPTH = 6;
+
+    public static void initialize()
+    {
+        oracle = new Oracle();
+    }
     
     public static void makeNextWhiteMoves(){
         
@@ -19,10 +24,12 @@ public class Robot {
         for(Move m:resultantMoveSeq){
             Game.board.genericMakeWhiteMove(m);
         }
-        
-        System.out.print("Robot's Move was ");
-        UserInteractions.DisplayMoveSeq(resultantMoveSeq);
-        System.out.println();
+
+        if(UserInteractions.isDisplayOn) {
+            System.out.print("Robot's Move was ");
+            UserInteractions.DisplayMoveSeq(resultantMoveSeq);
+            System.out.println();
+        }
     }
     
     

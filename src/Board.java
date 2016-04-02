@@ -161,28 +161,28 @@ public class Board {
     
     public void Display()
     {
-        this.DisplayColIndex();
-        this.DrawHorizontalLine();
-        
-        for(int i = rows-1; i >=0; i--)
-        {
-            this.DisplayRowIndex(i);           
-            this.DrawVerticalLine();
-            
-            for(int j = 0; j< cols; j++)
-            {
-                System.out.print(this.BoardPiece(i,j));
-                this.DrawVerticalLine();
-            }   
-            
-            this.DisplayRowIndex(i);
-            System.out.println();
+
+        if(UserInteractions.isDisplayOn) {
+            this.DisplayColIndex();
             this.DrawHorizontalLine();
+
+            for (int i = rows - 1; i >= 0; i--) {
+                this.DisplayRowIndex(i);
+                this.DrawVerticalLine();
+
+                for (int j = 0; j < cols; j++) {
+                    System.out.print(this.BoardPiece(i, j));
+                    this.DrawVerticalLine();
+                }
+
+                this.DisplayRowIndex(i);
+                System.out.println();
+                this.DrawHorizontalLine();
+            }
+
+            this.DisplayColIndex();
+            System.out.println();
         }
-        
-        this.DisplayColIndex();
-        System.out.println("White pieces: "+whitePieces + ", black pieces: " +blackPieces);
-        System.out.println();
     }    
 
     private String BoardPiece(int i, int j) {
