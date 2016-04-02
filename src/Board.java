@@ -181,6 +181,7 @@ public class Board {
         }
         
         this.DisplayColIndex();
+        System.out.println("White pieces: "+whitePieces + ", black pieces: " +blackPieces);
         System.out.println();
     }    
 
