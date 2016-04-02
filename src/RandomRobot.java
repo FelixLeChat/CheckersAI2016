@@ -3,6 +3,7 @@ import java.util.Vector;
 
 /**
  * Created by Felix on 3/29/2016.
+ * TP3 - AI
  */
 public class RandomRobot extends Robot{
 
@@ -16,7 +17,7 @@ public class RandomRobot extends Robot{
 
     private static void makeNextMoveRandom(Player type)
     {
-        Vector<Move> resultantMoveSeq = new Vector<Move>();
+        Vector<Move> resultantMoveSeq;
 
         if(type == Player.white) {
             resultantMoveSeq = White.CalculateAllForcedMovesForWhite(Game.board);

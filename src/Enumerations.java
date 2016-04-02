@@ -3,8 +3,6 @@
  * and open the template in the editor.
  */
 
-import javafx.scene.control.Cell;
-
 /**
  *
  * @author ASHISH
