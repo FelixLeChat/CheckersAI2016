@@ -18,20 +18,21 @@ public class RandomRobot extends Robot{
     private static void makeNextMoveRandom(Player type)
     {
         Vector< Vector<Move>> resultantMoveSeq = expandMoves(Game.board, type);
+        if(resultantMoveSeq.size()>0) {
+            int rnd = new Random().nextInt(resultantMoveSeq.size());
+            Vector<Move> moves = resultantMoveSeq.elementAt(rnd);
+            for (Move m : moves) {
+                if (type == Player.white)
+                    Game.board.genericMakeWhiteMove(m);
+                else
+                    Game.board.genericMakeBlackMove(m);
 
-        int rnd = new Random().nextInt(resultantMoveSeq.size());
-        Vector<Move> moves = resultantMoveSeq.elementAt(rnd);
-        for(Move m:moves){
-            if(type ==   Player.white)
-                Game.board.genericMakeWhiteMove(m);
-            else
-                Game.board.genericMakeBlackMove(m);
+            }
 
+            //System.out.print("Random Robot's Move was ");
+            // UserInteractions.DisplayMoveSeq(moves);
+            //System.out.println();
         }
-
-        //System.out.print("Random Robot's Move was ");
-       // UserInteractions.DisplayMoveSeq(moves);
-        //System.out.println();
     }
 
 }

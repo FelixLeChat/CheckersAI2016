@@ -37,6 +37,21 @@ public class Move {
         }
         return false;
     }
+
+    public MoveDir getMoveDir()
+    {
+        if(initialRow > finalCol)
+        {
+            if(initialCol > finalCol)
+                return MoveDir.backwardLeft;
+            return MoveDir.backwardRight;
+        }
+        if(initialCol > finalCol)
+            return MoveDir.forwardLeft;
+        return MoveDir.backwardLeft;
+    }
+
+
     
     public void display(){
         System.out.print("("+this.initialRow+","+this.initialCol+") -->"+" ("+this.finalRow+", "+this.finalCol+")");

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AI_TP3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AI_TP3_jar</output-path>
+    <root id="archive" name="AI_TP3_1679095_1688951.jar">
+      <element id="module-output" name="CheckersAI2016" />
+    </root>
+  </artifact>
+</component>

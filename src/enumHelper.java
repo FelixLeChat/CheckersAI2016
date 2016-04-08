@@ -6,4 +6,19 @@ public class enumHelper {
             return Player.black;
         return null;
     }
+
+    public static MoveDir switchDirection(MoveDir dir)
+    {
+        switch (dir){
+            case forwardLeft:
+                return MoveDir.backwardRight;
+            case forwardRight:
+                return MoveDir.backwardLeft;
+            case backwardLeft:
+                return MoveDir.forwardRight;
+            case backwardRight:
+                return MoveDir.forwardLeft;
+        }
+        return null;
+    }
 }
